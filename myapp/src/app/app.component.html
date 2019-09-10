@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <hr>
+  <h3>Router Link Example</h3>
+<a [routerLink]="['/student']">Student</a> ------
+<a [routerLink]="['/studenthistory']">Student History</a>----Routing link<br><br>
+<a [routerLink]="['/parentshistory']">Parents History</a>----Wildcard route<br><br>
+
+<button (click)="student()">Show Student</button>----
+<button (click)="studentdetail()">Show Student Details</button>----
+<button (click)="studenthistory()">Show Student History</button>-----Server side Routing on button click
+
+
+  <div>
+<router-outlet></router-outlet>
+</div>
+<hr>
+<h2>{{text}}</h2> --- using services
+<hr>
+<table border="1">
+  <tr *ngFor="let em of emp">
+    <td>{{em.empcode}}</td>
+    <td>{{em.name}}</td>
+
+  </tr>
+</table>
